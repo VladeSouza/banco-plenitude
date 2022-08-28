@@ -1,0 +1,8 @@
+-r base.txt
+-r test.txt
+
+ipdb
+ipython
+flask-shell-ipython
+isort
+psycopg2-binary

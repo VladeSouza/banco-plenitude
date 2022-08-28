@@ -1,0 +1,9 @@
+-r base.txt
+black
+flake8
+pytest
+pytest-cov
+pytest-runner
+Faker
+pytest-django
+# pytest-flask
