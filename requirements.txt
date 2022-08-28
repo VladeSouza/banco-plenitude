@@ -1,6 +1,6 @@
 Django
 djangorestframework
-# psycopg2
+psycopg2
 drf-spectacular
 Pillow
 # uwsgi
