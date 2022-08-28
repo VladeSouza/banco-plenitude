@@ -11,14 +11,19 @@ ENV PYTHONDONTWRITEBYTECODE 1
 # prevents Python from buffering stdout and stderr
 ENV PYTHONUNBUFFERED 1
 
-COPY ./requirements/base.txt /tmp/requirements/base.txt
+COPY ./requirements.txt /tmp/requirements.txt
+COPY ./requirements.dev.txt /tmp/requirements.dev.txt
 COPY ./src /src
 WORKDIR /src
 EXPOSE 8000
 
+ARG DEV=false
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
-    /py/bin/pip install -r /tmp/requirements/base.txt && \
+    /py/bin/pip install -r /tmp/requirements.txt && \
+    if [ $DEV = "true" ]; \
+        then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
+    fi && \
     rm -rf /tmp && \
     adduser \
         --disabled-password \

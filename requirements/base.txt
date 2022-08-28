@@ -5,6 +5,8 @@ Django
 djangorestframework
 django-allauth
 python-decouple
+Pillow
+# uwsgi
 # psycopg2
 
 

@@ -5,4 +5,4 @@ ipdb
 ipython
 flask-shell-ipython
 isort
-psycopg2-binary
+# psycopg2-binary
